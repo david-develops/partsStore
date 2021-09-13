@@ -10,6 +10,7 @@ header{
 #header-title{
     margin: 0;
     padding: 1px 0;
+    text-align: center;
 }
 nav{
     display: flex;
@@ -27,6 +28,17 @@ nav{
     margin: 0 10px;
     font-size: 24px;
 }
+#nav-links > li > a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 2px;
+}
+#nav-links > li > a:hover{
+    background-color: black;
+    color: #e6e619;
+}
+
 #nav-links > li:first-child{
     margin: 0px 10px 0px 0px;
 }
@@ -43,6 +55,16 @@ nav{
     margin: 0 10px;
     font-size: 24px;
 
+}
+#account-control-wrap > li > a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 2px;
+}
+#account-control-wrap > li > a:hover{
+    background-color: black;
+    color: #e6e619;
 }
 .banner-image-wrap{
     text-align: center;
@@ -68,19 +90,18 @@ nav{
 .featured{
     display: flex;
     justify-content: space-evenly;
+    margin: 10px 0;
+}
+.featured-desc{
+    max-width: 25vw;
 }
 footer{
     min-height: 75px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     background-color: black;
     color: #e6e619;
 }
 #footer-nav{
     display: flex;
-    align-items: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -91,3 +112,14 @@ footer{
     margin: 0 10px;
     font-size: 24px;
 }
+#footer-nav > li > a{
+    text-decoration: none;
+    color: #e6e619;
+    display: block;
+    padding: 2px;
+}
+#footer-nav > li > a:hover{
+    background-color: #e6e619;
+    color: black;
+}
+

@@ -26,14 +26,17 @@
                 <div id="featured-1">
                     <h3>Featured Part</h3>
                     <img src="img/turbo.jpg" alt="A turbo">
+                    <p class="featured-desc" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint repellendus quae accusantium quos, maiores iure ipsam voluptate magnam laboriosam assumenda illo nam nihil delectus ipsum ea. Quasi cupiditate molestiae maxime.</p>
                 </div>
                 <div id="featured-2">
                     <h3>Featured Part</h3>
                     <img src="img/turbo.jpg" alt="A turbo">
+                    <p class="featured-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint repellendus quae accusantium quos, maiores iure ipsam voluptate magnam laboriosam assumenda illo nam nihil delectus ipsum ea. Quasi cupiditate molestiae maxime.</p>
                 </div>
                 <div id="featured-3">
                     <h3>Featured Part</h3>
                     <img src="img/turbo.jpg" alt="A turbo">
+                    <p class="featured-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint repellendus quae accusantium quos, maiores iure ipsam voluptate magnam laboriosam assumenda illo nam nihil delectus ipsum ea. Quasi cupiditate molestiae maxime.</p>
                 </div>
             </section>
         </main>
