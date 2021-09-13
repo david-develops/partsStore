@@ -16,7 +16,7 @@
     </head>
     <body>
         <script>0</script>
-        <?php include 'includes/sections/header.html' ?>
+        <?php include 'sections/header.html' ?>
         <main class="raleway">
             <section class="banner-image-wrap">
                 <img src="img/dauphinLogo.jpg" alt="Dauphin Motor Company - Logo">
@@ -41,6 +41,6 @@
                 </div>
             </section>
         </main>
-        <?php include 'includes/sections/footer.html'?>
+        <?php include 'sections/footer.html'?>
     </body>
 </html>

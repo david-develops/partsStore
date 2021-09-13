@@ -15,11 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include 'includes/sections/header.html' ?>
+    <?php include 'sections/header.html' ?>
     <main>
         <section   id="sign-in-form-wrap" class="raleway account-form-wrap">
             <div class="account-form-header">Log-In</div>
-            <form method="POST" class="account-form" id="sign-in-form" action="login.inc.php">
+            <form method="POST" class="account-form" id="sign-in-form" action="dbhandlers/login.php">
                 <label for="userName">Username : </label>
                 <input class="sign-in-input" name="userName" type="text" placeholder="Username">
                 <label for="pass">Password : </label>
@@ -28,6 +28,6 @@
             </form>
         </section>
     </main>
-    <?php include 'includes/sections/footer.html'?>
+    <?php include 'sections/footer.html'?>
 </body>
 </html>
