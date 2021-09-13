@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">        
     </head>
     <body>
+        <script>0</script>
         <?php include 'includes/sections/header.html' ?>
         <main class="raleway">
             <section class="banner-image-wrap">

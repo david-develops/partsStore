@@ -1,6 +1,15 @@
 body{
     margin: 0;
 }
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+  }
+  input, textarea, select, button {
+    padding: 0;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
 .raleway{
     font-family: 'Raleway', sans-serif;
 }
@@ -66,6 +75,10 @@ nav{
     background-color: black;
     color: #e6e619;
 }
+main{
+    min-height: 60vh;
+    margin-bottom: 45px;
+}
 .banner-image-wrap{
     text-align: center;
     min-height: 200px;
@@ -122,4 +135,29 @@ footer{
     background-color: #e6e619;
     color: black;
 }
-
+.account-form-wrap{
+    margin: 10vh auto;
+    width: 40vw;
+    border: 2px solid black;
+}
+.account-form-header{
+    font-size: 36px;
+    text-align: center;
+    background-color: #e6e619;
+}
+.account-form{
+    margin: 25px auto;
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    justify-items: center;
+}
+.account-form > input, button {
+    min-width: 50%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.account-form > label{
+    justify-self: left;
+}
