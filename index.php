@@ -16,12 +16,26 @@
     </head>
     <body>
         <?php include 'includes/sections/header.html' ?>
-        <main>
+        <main class="raleway">
             <section class="banner-image-wrap">
                 <img src="img/dauphinLogo.jpg" alt="Dauphin Motor Company - Logo">
                 <span class="logo-text raleway" >Motor Company</span>
             </section>
-            <section class="tagline"></section>
+            <section class="tagline"><span class="tagline-text" >Bringing performance arts to your garage.</span></section>
+            <section class="featured">
+                <div id="featured-1">
+                    <h3>Featured Part</h3>
+                    <img src="img/turbo.jpg" alt="A turbo">
+                </div>
+                <div id="featured-2">
+                    <h3>Featured Part</h3>
+                    <img src="img/turbo.jpg" alt="A turbo">
+                </div>
+                <div id="featured-3">
+                    <h3>Featured Part</h3>
+                    <img src="img/turbo.jpg" alt="A turbo">
+                </div>
+            </section>
         </main>
         <?php include 'includes/sections/footer.html'?>
     </body>
