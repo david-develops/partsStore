@@ -20,16 +20,16 @@ if(isset($_POST['submit'])){
         header("Location: ../signUp.php?error=userNameInvalid");
         exit();
     }
-    if (userNameExists($conn, $userName) !== false) {
+    if (userNameExists($conn, $userName, $userEmail) !== false) {
         header("Location: ../signUp.php?error=userNameTaken");
         exit();
     }
-    if (passWordInvalid($userPass, $userRePass) !== false) {
-        header("Location: ../signUp.php?error=passwordInvalid");
+    if (passWordMismatch($userPass, $userRePass) !== false) {
+        header("Location: ../signUp.php?error=passwordsDoNotMatch");
         exit();
     }
     if (emailInvalid($userBdate, $userEmail, $userName, $userPass, $userRePass) !== false) {
-        header("Location: ../signUp.php?error=emptyInput");
+        header("Location: ../signUp.php?error=emailInvalid");
         exit();
     }
     createUser($conn, $userName, $userPass, $userEmail, $userBdate);
