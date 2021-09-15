@@ -1,28 +1,40 @@
 <?php
 function emptyInput($userName, $userPass, $userEmail, $userBdate){
+    $res=null;
     if(empty($userName)||empty($userPass)||empty($userEmail)||empty($userBdate)){
-        return true;
+        $res=true;
+    }else{
+        $res=false;
     }
-    return false;
+    return $res;
 }
 
 function userNameInvalid($userName){
+    $res=null;
     if(!preg_match("/^[a-zA-Z0-9]*$/", $userName)){
-        return true;
+        $res=true;
+    }else{
+        $res=false;
     }
-    return false;
+    return $res;
 }
 function emailInvalid($userEmail){
-    if(!filter_var($userEmail, FILTER_VALIDATE_EMAIL)){
-        return true;
+    $res=null;
+    if(!(filter_var($userEmail, FILTER_VALIDATE_EMAIL))){
+        $res=true;
+    }else{
+        $res=false;
     }
-    return false;
+    return $res;
 }
 function passWordMismatch($userPass, $userRePass){
+    $res=null;
     if($userPass !== $userRePass){
-        return true;
+        $res=true;
+    }else{
+        $res=false;
     }
-    return false;
+    return $res;
 }
 function userNameExists($conn, $userName, $userEmail){
     //create outline of SQL statement to be passed to DB
@@ -43,11 +55,13 @@ function userNameExists($conn, $userName, $userEmail){
 
     //return results
     //get result as assoc array
-    if(mysqli_fetch_assoc($resultData)){
+    if($row = mysqli_fetch_assoc($resultData)){
         //TODO - finish this according to Dani's Instruction
+        return $row;
     }else{
         return false;
     }
+    mysqli_stmt_close($stmt);
 }
 
 function createUser($conn, $userName, $userPass, $userEmail, $userBdate){

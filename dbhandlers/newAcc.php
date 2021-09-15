@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
         header("Location: ../signUp.php?error=passwordsDoNotMatch");
         exit();
     }
-    if (emailInvalid($userBdate, $userEmail, $userName, $userPass, $userRePass) !== false) {
+    if (emailInvalid($userEmail) !== false) {
         header("Location: ../signUp.php?error=emailInvalid");
         exit();
     }
