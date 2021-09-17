@@ -1,7 +1,7 @@
 <?php
 //Database connection file
     include 'dbh.php';
-    require_once '../functions.php';
+    require_once 'functions.php';
 //check that user submitted create account form
 if(isset($_POST['submit'])){
     //get input data from form 

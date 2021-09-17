@@ -56,7 +56,6 @@ function userNameExists($conn, $userName, $userEmail){
     //return results
     //get result as assoc array
     if($row = mysqli_fetch_assoc($resultData)){
-        //TODO - finish this according to Dani's Instruction
         return $row;
     }else{
         return false;
@@ -65,10 +64,21 @@ function userNameExists($conn, $userName, $userEmail){
 }
 
 function createUser($conn, $userName, $userPass, $userEmail, $userBdate){
+    //create hashWord
+    $hashWord = password_hash($userPass, PASSWORD_DEFAULT);
     //create INSERT statement
-    $sql = "INSERT INTO `users` (UserName, UserPass, UserEmail, UserBDate) VALUES ('$userName', '$userPass', '$userEmail', '$userBdate')";
-    //run query
-    mysqli_query($conn, $sql);
+    $sql = "INSERT INTO `users` (UserName, UserPass, UserEmail, UserBDate) VALUES (?,?,?,?)";
+    //init prepared statement
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("Location: ../signUp.php?error=failStmt");
+        exit();
+    }
+    //Bind user input to the stmt
+    mysqli_stmt_bind_param($stmt, "ssss", $userName, $hashWord, $userEmail, $userBdate);
+    //execute stmt and close
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
     //redirect to homepage with success message in URL
     header("Location: ../index.php?create=success");
 }
