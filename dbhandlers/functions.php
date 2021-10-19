@@ -8,7 +8,15 @@ function emptyInput($userName, $userPass, $userEmail, $userBdate){
     }
     return $res;
 }
-
+function emptyInputLogin($userName, $userPass){
+    $res=null;
+    if(empty($userName)||empty($userPass)){
+        $res=true;
+    }else{
+        $res=false;
+    }
+    return $res;
+}
 function userNameInvalid($userName){
     $res=null;
     if(!preg_match("/^[a-zA-Z0-9]*$/", $userName)){

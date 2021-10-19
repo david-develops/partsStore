@@ -2,8 +2,9 @@
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
-$dbName = "dauphinMotorsUsers";
+$dbName = "DauphinMotorsDB";
 
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
 if(!$conn){

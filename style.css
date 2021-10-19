@@ -161,3 +161,18 @@ footer{
 .account-form > label{
     justify-self: left;
 }
+.sign-up-error{
+    font-size: large;
+    color: red;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+.account-success{
+    text-align: center;
+    background-color: green;
+    border: 1px solid black;
+}
+.account-success > h3{
+    margin: 1px;
+}

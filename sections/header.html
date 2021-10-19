@@ -1,4 +1,11 @@
 <header class="raleway">
+    <?php 
+    if(isset($_GET["create"])){
+            if($_GET["create"]== 'success'){
+                echo '<div class="account-success" ><h3>Account Created</h3></div>';
+            }
+        }
+    ?>
     <h1 id="header-title">Dauphin Motor Company</h1>
     <nav>
         <ul id="nav-links">

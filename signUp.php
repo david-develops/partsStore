@@ -32,7 +32,34 @@
                     <input name='bDate' type="date">
 
                     <button class="sign-up-input account-form-button" type="submit" value="submit" name="submit" id="account-form-submit-button">Create Account</button>
+                    
                 </form>
+                <?php
+                        if(isset($_GET["error"])){
+                            switch ($_GET['error']) {
+                                case 'emptyInput':
+                                    echo "<h3 class='sign-up-error'>Please ensure all fields are complete</h3>";
+                                    break;
+                                case 'userNameInvalid':
+                                    echo "<h3 class='sign-up-error'>Please choose an acceptable Username</h3>";
+                                    break;
+                                case 'passwordsDoNotMatch':
+                                    echo "<h3 class='sign-up-error'>Passwords didn't match</h3>";
+                                    break;
+                                case 'emailInvalid':
+                                    echo "<h3 class='sign-up-error'>Please use a Valid E-mail</h3>";
+                                    break;
+                                case 'userNameTaken':
+                                    echo "<h3 class='sign-up-error'>That Username is taken</h3>";
+                                    break;
+                
+                                default:
+                                echo "<h3 class='sign-up-error' >Something went wrong, try again.</h3>";
+                                break;
+                            }
+                        }
+
+                    ?>
             </section>
         </main>
         <?php include 'sections/footer.html'?>
