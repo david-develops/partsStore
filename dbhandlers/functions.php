@@ -90,3 +90,7 @@ function createUser($conn, $userName, $userPass, $userEmail, $userBdate){
     //redirect to homepage with success message in URL
     header("Location: ../index.php?create=success");
 }
+function login($conn, $userName, $userPass){
+   // $sql = "SELECT UserID as ID, UserName, UserEmail, UserBDate FROM `users` WHERE"
+   // *** What do we do in order to log in? Must be some special method of doing this
+}

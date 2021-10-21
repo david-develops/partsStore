@@ -21,6 +21,10 @@ header{
     padding: 1px 0;
     text-align: center;
 }
+.header-title-link{
+    text-decoration: none;
+    color: black;
+}
 nav{
     display: flex;
     border-bottom: 1px solid black;
@@ -175,4 +179,7 @@ footer{
 }
 .account-success > h3{
     margin: 1px;
+}
+.about-section{
+    margin: 45px 75px;
 }

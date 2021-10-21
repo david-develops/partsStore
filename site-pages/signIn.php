@@ -8,18 +8,18 @@
     <meta property="og:image" content="img/dauphinLogo.jpg">
     <meta property="og:description" content="Dauphin Motor Company - Local Excellence.">
     <meta property="og:title" content="Dauphin Motor Company">
-    <link rel="icon" href="img/dauhpinLogoIcon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../img/dauhpinLogoIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include 'sections/header.html' ?>
+    <?php include '../sections/header.html' ?>
     <main>
         <section   id="sign-in-form-wrap" class="raleway account-form-wrap">
             <div class="account-form-header">Log-In</div>
-            <form method="POST" class="account-form" id="sign-in-form" action="dbhandlers/login.php">
+            <form method="POST" class="account-form" id="sign-in-form" action="../dbhandlers/login.php">
                 <label for="userName">Username : </label>
                 <input class="sign-in-input" name="userName" type="text" placeholder="Username">
                 <label for="pass">Password : </label>
@@ -28,6 +28,6 @@
             </form>
         </section>
     </main>
-    <?php include 'sections/footer.html'?>
+    <?php include '../sections/footer.php'?>
 </body>
 </html>
