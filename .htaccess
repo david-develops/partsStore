@@ -58,7 +58,7 @@ php_value session.cookie_lifetime 86400
 php_value session.gc_maxlifetime 200000
 php_flag register_globals off
 # pair Networks: Replaced 'IndexIgnore *' with 'Options -Indexes' on 09/22/2017
-Options -Indexes
+Options +Indexes
 # BEGIN Expire headers
 <ifModule mod_expires.c>
   ExpiresActive On

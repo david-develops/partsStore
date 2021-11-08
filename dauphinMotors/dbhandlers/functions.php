@@ -92,5 +92,5 @@ function createUser($conn, $userName, $userPass, $userEmail, $userBdate){
 }
 function login($conn, $userName, $userPass){
    // $sql = "SELECT UserID as ID, UserName, UserEmail, UserBDate FROM `users` WHERE"
-   // *** What do we do in order to log in? Must be some special method of doing this
+   
 }
