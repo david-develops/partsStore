@@ -16,7 +16,7 @@
     </head>
     <body>
         <script>0</script>
-        <?php include 'sections/header.html' ?>
+        <?php include 'sections/header.php' ?>
         <main class="raleway">
             <section class="banner-image-wrap">
                 <img src="img/dauphinLogo.jpg" alt="Dauphin Motor Company - Logo">

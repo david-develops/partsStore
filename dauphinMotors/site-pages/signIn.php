@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include '../sections/header.html' ?>
+    <?php include '../sections/header.php' ?>
     <main>
         <section   id="sign-in-form-wrap" class="raleway account-form-wrap">
             <div class="account-form-header">Log-In</div>
