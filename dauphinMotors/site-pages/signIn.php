@@ -21,11 +21,19 @@
             <div class="account-form-header">Log-In</div>
             <form method="POST" class="account-form" id="sign-in-form" action="../dbhandlers/login.php">
                 <label for="userName">Username : </label>
-                <input class="sign-in-input" name="userName" type="text" placeholder="Username">
+                <input class="sign-in-input" name="userName" type="text" placeholder="Username or E-mail">
                 <label for="pass">Password : </label>
                 <input class="sign-in-input" name="pass" type="text" placeholder="Password">
                 <button class="sign-in-input account-form-button" type="submit" value="submit" name="submit" id="account-form-submit-button">Log-In</button>
             </form>
+        </section>
+        <section>
+            <pre>
+            <h1>DEBUGGING</h1>
+            <?php 
+                var_dump($_SERVER);
+            ?>
+            </pre>
         </section>
     </main>
     <?php include '../sections/footer.php'?>

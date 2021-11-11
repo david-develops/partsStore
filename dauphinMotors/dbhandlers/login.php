@@ -1,4 +1,6 @@
 <?php
+    include 'dbh.php';
+    require_once 'functions.php';
 
 if (isset($_POST["submit"])){
 
@@ -10,13 +12,16 @@ if (isset($_POST["submit"])){
     $pass = $_POST['pass'];
 
     //check for empty input
-    if (emptyInputLogin($userName, $userPass) !== false) {
-        header("Location: ../login.php?error=emptyInput");
+    if (emptyInputLogin($username, $pass) !== false) {
+        header("Location: ../site-pages/signIn.php?error=emptyInput");
         exit();
     }
-    if (userNameInvalid($userName) !== false) {
-        header("Location: ../login.php?error=userNameInvalid");
+    if (userNameInvalid($username) !== false) {
+        header("Location: ../site-pages/signIn.php?error=userNameInvalid");
         exit();
     }
- 
+    login($conn, $username, $pass);
+}else{
+    header("Location: ../signUp.php?redir=true");
+    exit();
 }

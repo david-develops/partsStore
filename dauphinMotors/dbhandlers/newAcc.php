@@ -11,7 +11,6 @@ if(isset($_POST['submit'])){
     $userEmail = $_POST['email'];
     $userBdate = $_POST['bDate'];
 
-    //TODO -check for empty/invalid inputs
     if (emptyInput($userName, $userPass, $userEmail, $userBdate) !== false) {
         header("Location: ../signUp.php?error=emptyInput");
         exit();

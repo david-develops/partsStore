@@ -51,7 +51,7 @@ function userNameExists($conn, $userName, $userEmail){
     $stmt = mysqli_stmt_init($conn);
     //Check for fail of stmt
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../signUp.php?error=failStmt");
+        header("Location: signUp.php?error=failStmt");
         exit();
     }
     //Bind user input to the stmt
@@ -79,7 +79,7 @@ function createUser($conn, $userName, $userPass, $userEmail, $userBdate){
     //init prepared statement
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../signUp.php?error=failStmt");
+        header("Location: signUp.php?error=failStmt");
         exit();
     }
     //Bind user input to the stmt
@@ -92,5 +92,26 @@ function createUser($conn, $userName, $userPass, $userEmail, $userBdate){
 }
 function login($conn, $userName, $userPass){
    // $sql = "SELECT UserID as ID, UserName, UserEmail, UserBDate FROM `users` WHERE"
-   
+   $userExists = userNameExists($conn, $userName, $userName);
+   if(!$userExists){
+    var_dump($conn);
+    var_dump($userName);
+    header("Location: ../site-pages/signIn.php?error=incorrectCredentials");
+    exit();
+   }
+
+   $hashWord = $userExists['UserPass'];
+
+   $checkHashWord = password_verify($userPass, $hashWord);
+   if(!$checkHashWord){
+    var_dump($conn);
+    var_dump($userName);
+    header("Location: ../site-pages/signIn.php?error=incorrectCredentials");
+    exit();
+   }else{
+    session_start();
+    $_SESSION['userId'] = $userExists['UserID'];
+    $_SESSION['userName'] = $userExists['UserName'];
+    header('../index.php');
+   }
 }
